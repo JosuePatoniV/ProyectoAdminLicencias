@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class accion {
     private int id;
-    private LocalDateTime dateAcction=LocalDateTime.now();
+    private LocalDateTime dateAcction;
     private LocalDateTime date2;
     private int idLicencia;
     private int idAdministrador;
@@ -25,5 +25,42 @@ public class accion {
         this.idLicencia=idLicencia;
         this.idAdministrador=idAdministrador;
     }
-
+    //Metodo get
+    public int getId() {
+        return id;
+    }
+    public LocalDateTime getDateAcction(){
+        return dateAcction;
+    }
+    public LocalDateTime getDate2(){
+        return date2;
+    }
+    public int getIdLicencia() {
+        return idLicencia;
+    }
+    public int getIdAdministrador() {
+        return idAdministrador;
+    }
+    public int getCosto() {
+        return costo;
+    }
+    //metodos set
+    public void setId(int id) {
+        this.id = id;
+    }
+    public void setIdLicencia(int idLicencia) {
+        this.idLicencia = idLicencia;
+    }
+    public void setDateAcction(LocalDateTime dateAcction) {
+        this.dateAcction = dateAcction;
+    }
+    public void setDate2(LocalDateTime date2) {
+        this.date2 = date2;
+    }
+    public void setCosto(int costo) {
+        this.costo = costo;
+    }
+    public void setIdAdministrador(int idAdministrador) {
+        this.idAdministrador = idAdministrador;
+    }
 }
