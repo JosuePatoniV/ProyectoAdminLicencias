@@ -7,9 +7,10 @@ import java.util.Scanner;
 import static org.AdminSoft.Controller.Autentificacion.ingreso;
 import static org.AdminSoft.Controller.conexionbd.conectar;
 import static org.AdminSoft.Model.otros.imprimir.p;
+import static org.AdminSoft.Visual.Menu.menu;
+
 public class Ingreso {
     public static void Ingreso() {
-
         Scanner scanner= new Scanner(System.in);
         boolean estado=false;
 
@@ -23,8 +24,7 @@ public class Ingreso {
             p("Contraseña(apellido paterno): ");
             String password = scanner.nextLine();
             estado=ingreso(usuario, password);
-
         }
-
     }
+
 }

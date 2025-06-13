@@ -2,13 +2,15 @@ package org.AdminSoft.Model;
 
 public class Licencia {
     private int idLicencia;
+    private int idProducto;
     private String codigoLicencia;
     private String estado;
     //Metodo constructor
-    public Licencia(int idLicencia,String codigoLicencia,String estado){
+    public Licencia(int idLicencia,String codigoLicencia,String estado,int idProducto){
         this.idLicencia=idLicencia;
         this.codigoLicencia=codigoLicencia;
         this.estado=estado;
+        this.idProducto=idProducto;
     }
     //metodos get
     public int getIdLicencia() {
@@ -20,6 +22,7 @@ public class Licencia {
     public String getEstado() {
         return estado;
     }
+    public int getIdProducto() {return idProducto;}
     //metodos set
 
     public void setIdLicencia(int idLicencia) {
@@ -30,6 +33,16 @@ public class Licencia {
     }
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return "Licencia: " +
+                "ID=" + idLicencia +
+                "\nEstado: " + estado  +
+                "\nCodigo: " + codigoLicencia +
+                "\nProductoID= " + idProducto+
+                "\n------------";
     }
 
 }
