@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import static org.AdminSoft.Model.otros.imprimir.p;
 import static org.AdminSoft.Visual.ConsultaLicenciasV.consultalicencia;
+import static org.AdminSoft.Visual.compraLicenciaV.compra;
 
 public class Menu {
     public static void menu(){
@@ -18,6 +19,7 @@ public class Menu {
         while(salir!=true) {
             p("1.Consulta Licencias");
             p("2.Consulta Administradores");
+            p("3.Registrar compra");
             p("44.Salir");
             try {
                 opcion = scanner.nextInt();
@@ -30,6 +32,13 @@ public class Menu {
                     consultalicencia();
                     break;
 
+                case 2:
+
+                    break;
+
+                case 3:
+                    compra();
+                    break;
                 case 44:
                     p("Seguro que deseas salir(0/1)");
                     int sali= scanner.nextInt();

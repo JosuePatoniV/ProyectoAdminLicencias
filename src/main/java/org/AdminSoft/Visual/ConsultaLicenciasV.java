@@ -3,6 +3,7 @@ package org.AdminSoft.Visual;
 import java.util.Scanner;
 
 import static org.AdminSoft.Controller.ConsultaLicencias.consulta;
+import static org.AdminSoft.Controller.ConsultaLicencias.consulta2;
 import static org.AdminSoft.Controller.impresionSet.imprimir;
 import static org.AdminSoft.Model.otros.imprimir.p;
 
@@ -19,6 +20,7 @@ public class ConsultaLicenciasV {
             p("1.Todas las licencias");
             p("2.Licencias activas");
             p("3.Licencias inactivas");
+            p("4.Licencias expiradas");
             p("44.salir");
             try {
                 opcion = scanner.nextInt();
@@ -30,6 +32,16 @@ public class ConsultaLicenciasV {
                 case 1:
                     imprimir(consulta());
                     break;
+                case 2:
+                    imprimir(consulta2("Activa"));
+                    break;
+                case 3:
+                    imprimir(consulta2("Inactiva"));
+                    break;
+                case 4:
+                    imprimir(consulta2("Expirada"));
+                    break;
+
             }
         }
     }
